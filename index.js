@@ -86,7 +86,7 @@ function handleDeleteItemClicked() {
   $(`.js-shopping-list`).on('click', `.js-item-delete`, event => {
     console.log('`handleDeleteItemClicked` ran');
     const id = getItemIdFromElement(event.currentTarget);
-    STORE.splice(id);
+    STORE.splice(id, 1);
     renderShoppingList();
   });
   
